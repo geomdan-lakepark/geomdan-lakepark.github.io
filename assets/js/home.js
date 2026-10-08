@@ -50,7 +50,7 @@
     }
     return el;
   }
-  document.querySelectorAll('[data-brand-title]').forEach(el => {el.textContent = text(config.brand?.title) || '더샵 검단레이크파크';});
+  document.querySelectorAll('[data-brand-title]').forEach(el => {el.textContent = text(config.brand?.title) || '검단 더샵레이크파크';});
   document.querySelectorAll('[data-brand-subtitle]').forEach(el => {el.textContent = text(config.brand?.subtitle) || '입주예정자협의회';});
   const brandText = `${text(config.brand?.title)} ${text(config.brand?.subtitle)}`.trim();
   if (brandText) {document.title = brandText;document.querySelector('.brand').setAttribute('aria-label', `${brandText}, 맨 위로`);document.querySelector('meta[property="og:title"]').content = brandText;}
