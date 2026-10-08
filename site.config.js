@@ -8,14 +8,14 @@
  * 위임동의서 현황은 동호수_현황의 블록·상태별 집계만 읽습니다. source에서 기준과 갱신 주기를 변경합니다.
  */
 window.COUNCIL_SITE = {
-  brand: { title: '검단 더샵레이크파크', subtitle: '입주예정자협의회 공식 홈페이지' },
+  brand: { title: '더샵 검단레이크파크', subtitle: '입주예정자협의회 공식 홈페이지' },
   hero: {
     // 첫 줄 단지명은 이미지에 이미 인쇄되어 있어 화면 낭독용으로 제공됩니다.
     // 둘째 줄은 이미지 속 단지명 아래에 실제 글자로 표시됩니다.
-    title: ['검단 더샵레이크파크', '입주예정자협의회 공식 홈페이지'],
-    image: 'assets/images/hero-entrance-unified.svg',
+    title: ['더샵 검단레이크파크', '입주예정자협의회 공식 홈페이지'],
+    image: 'assets/images/hero-entrance.webp',
     backdrop: 'assets/images/hero-forest-wide.webp',
-    imageAlt: '나무와 산책로를 배경으로 검단 그 변화의 정점에서 만나는 더샵이라고 적힌 검단 더샵레이크파크 대문 이미지',
+    imageAlt: '나무와 산책로를 배경으로 검단 그 변화의 정점에서 만나는 더샵이라고 적힌 더샵 검단레이크파크 대문 이미지',
   },
   delegation: {
     visible: true,

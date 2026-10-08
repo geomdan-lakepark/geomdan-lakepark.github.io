@@ -32,10 +32,8 @@ Constraints: background must be dark navy across the entire canvas, no rectangul
 ```
 
 
-## 단지명 표기 통일 (2026-10-08)
+## 단지명 표기 통일 (2026-10-09)
 
-내장 이미지 생성·편집 도구 사용. 원본은 보존하고 새 파일 `assets/images/hero-entrance-unified.svg`를 생성했습니다.
+현재 메인 대문은 단지명이 정확히 ‘더샵 검단레이크파크’로 적힌 사용자 제공 원본 `assets/images/hero-entrance.webp`를 사용합니다. 원본 픽셀을 새로 편집하지 않았습니다.
 
-사용한 지시: 아래 중앙의 흰색 단지명 ‘더샵 검단레이크파크’를 정확히 ‘검단 더샵레이크파크’로 바꾸고 위치·크기·글씨체·색을 유지합니다. 숲·산책로·건물·사람·큰 슬로건과 하단 THE SHARP 로고, 원래 화면 비율과 구도를 최대한 보존합니다. 다른 글자나 요소는 바꾸지 않습니다.
-
-GitHub 직접 편집 기능으로 배포할 수 있도록 생성된 WebP를 SVG의 image 요소에 그대로 내장했습니다. 이미지 픽셀을 추가로 수정하지 않았습니다.
+이전 이미지 경로를 사용하는 경우에도 같은 표기를 표시하도록 `assets/images/hero-entrance-unified.svg`에는 위 WebP 원본 픽셀을 그대로 내장했습니다. 홈페이지 본문과 설정의 이미지 경로는 원본 WebP를 직접 참조합니다.
