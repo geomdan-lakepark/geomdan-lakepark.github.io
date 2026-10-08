@@ -30,3 +30,12 @@ Input image 1 is the EDIT TARGET.
 Change only the background and floor of this image. Replace the entire pale sky-blue background and floor with uniform deep midnight navy color HEX #071E30, extending fully to all four corners and edges. Preserve the same existing rounded white 3D document, folded top-right corner, four raised gray horizontal lines, pale blue circular badge and white checkmark, their proportions, relative positions and frontal perspective. Keep the object white and gently lit, badge pale blue; add only a subtle contact shadow immediately under them to ground the object naturally on the navy surface. Full square composition; full document and check badge visible with margins.
 Constraints: background must be dark navy across the entire canvas, no rectangular inset, no pale-colored backdrop, no studio horizon line, no vignette, no glow, no lettering, no logos, no interface, no transparency. Smooth clean object contours.
 ```
+
+
+## 단지명 표기 통일 (2026-10-08)
+
+내장 이미지 생성·편집 도구 사용. 원본은 보존하고 새 파일 `assets/images/hero-entrance-unified.svg`를 생성했습니다.
+
+사용한 지시: 아래 중앙의 흰색 단지명 ‘더샵 검단레이크파크’를 정확히 ‘검단 더샵레이크파크’로 바꾸고 위치·크기·글씨체·색을 유지합니다. 숲·산책로·건물·사람·큰 슬로건과 하단 THE SHARP 로고, 원래 화면 비율과 구도를 최대한 보존합니다. 다른 글자나 요소는 바꾸지 않습니다.
+
+GitHub 직접 편집 기능으로 배포할 수 있도록 생성된 WebP를 SVG의 image 요소에 그대로 내장했습니다. 이미지 픽셀을 추가로 수정하지 않았습니다.
