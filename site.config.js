@@ -49,12 +49,18 @@ window.COUNCIL_SITE = {
     deadline: '2026-09-30T23:00:00+09:00',
     timeZone: 'Asia/Seoul',
   },
-  navigation: ['cafe', 'delegation', 'petition'],
+  navLabels: { about: '우리 단지', council: '입예협 소개' },
+  navigation: ['about', 'council', 'cafe', 'delegation', 'petition'],
   sections: [
     {
-      id: 'cafe', visible: true, navLabel: '입예협 카페',
-      title: '입예협 카페', description: '우리 단지의 소식과 이야기를 나눕니다.',
+      id: 'cafe', visible: true, navLabel: '소통 채널', layout: 'channels',
+      title: '입예협 소통 채널', description: '소식은 카페에서, 대화는 카톡에서.',
       url: 'https://cafe.naver.com/tslp', buttonLabel: '카페 방문하기',
+      actions: [
+        { buttonLabel: '카톡 공지방', url: 'https://open.kakao.com/o/g8qdmoDi', style: 'primary' },
+        { buttonLabel: '카톡 소통방', url: 'https://open.kakao.com/o/gbmJJbFi', style: 'secondary' },
+      ],
+      codeLink: { label: '입장코드는 카페에서 확인', url: 'https://cafe.naver.com/tslp/2437' },
       image: 'assets/images/cafe.webp', imageAlt: '이웃의 소통을 표현한 말풍선',
       theme: 'cafe',
     },

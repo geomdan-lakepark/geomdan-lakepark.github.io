@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="assets/css/home.css">
   <script src="site.config.js" defer></script>
   <script src="assets/js/home.js" defer></script>
+  <script src="assets/js/home-ui.js" defer></script>
   <script src="assets/js/consent.js" defer></script>
 </head>
 <body id="top">
@@ -23,8 +24,8 @@
   <header class="site-header">
     <div class="nav-inner">
       <a class="brand" href="#top" aria-label="더샵 검단레이크파크 입주예정자협의회 공식 홈페이지, 맨 위로"><span class="brand-title" data-brand-title>더샵 검단레이크파크</span><span class="brand-subtitle" data-brand-subtitle>입주예정자협의회 공식 홈페이지</span></a>
-      <nav class="desktop-nav" aria-label="주요 메뉴" data-navigation><a class="nav-link" href="#cafe">입예협 카페</a><a class="nav-link" href="#delegation">위임동의서</a><a class="nav-link" href="#petition">단체민원</a></nav>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="메뉴 열기" hidden><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav class="desktop-nav" aria-label="주요 메뉴" data-navigation><a class="nav-link" href="#about">우리 단지</a><a class="nav-link" href="#council">입예협 소개</a><a class="nav-link" href="#cafe">소통 채널</a><a class="nav-link" href="#delegation">위임동의서</a><a class="nav-link" href="#petition">단체민원</a></nav>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="메뉴 열기" ><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 주요 메뉴" hidden></nav>
   </header>
@@ -32,6 +33,9 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-artwork"><div class="hero-backdrop" aria-hidden="true"><img id="hero-backdrop-image" src="assets/images/hero-forest-wide.webp" alt="" fetchpriority="high"></div><div class="hero-image"><img id="hero-image" src="assets/images/hero-entrance.webp" width="3456" height="2160" alt="나무와 산책로를 배경으로 검단 그 변화의 정점에서 만나는 더샵이라고 적힌 더샵 검단레이크파크 대문 이미지" fetchpriority="high"></div><h1 class="hero-title" id="hero-title" aria-label="더샵 검단레이크파크 입주예정자협의회 공식 홈페이지"><span>더샵 검단레이크파크</span><span>입주예정자협의회 공식 홈페이지</span></h1></div>
     </section>
+    <aside class="welcome-strip" aria-label="첫 방문 안내">
+      <div class="welcome-inner"><div class="welcome-copy"><span class="welcome-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 3 10v11h6v-7h6v7h6V10z"/></svg></span><div><strong>처음 방문하셨나요?</strong><p>카페 가입부터 위임동의서까지, 차근차근 안내해 드릴게요.</p></div></div><button type="button" class="text-link" id="guide-open">이용 안내 <span aria-hidden="true">＋</span></button></div>
+    </aside>
     <section class="delegation" id="delegation" aria-labelledby="delegation-title">
       <div class="section-copy"><h2 class="section-title" id="delegation-title">위임동의서 접수 현황</h2><p class="section-description" id="delegation-description">여러분의 동의가 협의회의 힘이 됩니다.</p></div>
       <div class="consent-summary" aria-label="블록별 위임동의율">
@@ -53,16 +57,62 @@
         </div>
       </div>
       <p class="consent-status" id="delegation-status">집계 준비 중</p>
-      <p class="visually-hidden" id="delegation-note">접수 현황은 준비가 완료되면 안내하겠습니다.</p>
+      <p class="visually-hidden" id="delegation-note">접수 현황을 확인하고 위임동의서를 작성해 주세요.</p>
       <p class="visually-hidden" id="consent-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
       <div class="delegation-actions" id="delegation-actions"><a class="delegation-link" href="https://form.naver.com/response/3xC5swspWEY" target="_blank" rel="noopener noreferrer" aria-label="위임동의서 작성하기, 새 창에서 열림" aria-describedby="delegation-note"><span class="delegation-link-label">위임동의서 작성하기 <span aria-hidden="true">↗</span></span></a></div>
     </section>
     <div class="features" id="features">
-      <section class="feature feature-cafe" id="cafe" aria-labelledby="cafe-title"><div class="feature-content"><h2 class="section-title" id="cafe-title">입예협 카페</h2><p class="section-description">우리 단지의 소식과 이야기를 나눕니다.</p><div class="button-row"><a class="button button-primary" href="https://cafe.naver.com/tslp" target="_blank" rel="noopener noreferrer" aria-label="카페 방문하기, 새 창에서 열림">카페 방문하기</a></div></div><div class="feature-image"><img src="assets/images/cafe.webp" width="1000" height="1000" alt="이웃의 소통을 표현한 말풍선" loading="lazy" decoding="async"></div></section>
-      <section class="feature feature-petition" id="petition" aria-labelledby="petition-title"><div class="feature-content"><h2 class="section-title" id="petition-title">단체민원</h2><p class="section-description">함께 전하는 의견, 더 나은 변화.</p><div class="button-row"><a class="button button-primary" href="complaints/index.html">민원 안내 보기</a></div></div><div class="feature-image"><img src="assets/images/petition-night.webp" width="1254" height="1254" alt="주민의 의견을 담은 문서" loading="lazy" decoding="async"></div></section>
+      <section class="feature feature-cafe feature-channels" id="cafe" aria-labelledby="cafe-title">
+        <a class="channel-card-link" href="https://cafe.naver.com/tslp" target="_blank" rel="noopener noreferrer" aria-label="입예협 카페 방문하기, 새 창에서 열림"><span>카페로 이동 <span aria-hidden="true">↗</span></span></a>
+        <div class="feature-content"><h2 class="section-title" id="cafe-title">입예협 소통 채널</h2><p class="section-description">소식은 카페에서, 대화는 카톡에서.</p>
+          <div class="button-row channel-actions"><a class="button button-primary" href="https://open.kakao.com/o/g8qdmoDi" target="_blank" rel="noopener noreferrer" aria-label="입예협 카톡 공지방, 새 창에서 열림">카톡 공지방 <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://open.kakao.com/o/gbmJJbFi" target="_blank" rel="noopener noreferrer" aria-label="입예협 카톡 소통방, 새 창에서 열림">카톡 소통방 <span aria-hidden="true">↗</span></a></div>
+          <a class="channel-code-link" href="https://cafe.naver.com/tslp/2437" target="_blank" rel="noopener noreferrer" aria-label="카톡방 입장코드는 카페에서 확인, 새 창에서 열림">입장코드는 카페에서 확인 <span aria-hidden="true">↗</span></a>
+        </div><div class="feature-image"><img src="assets/images/cafe.webp" width="1000" height="1000" alt="" loading="lazy" decoding="async"></div>
+      </section>
+      <section class="feature feature-petition" id="petition" aria-labelledby="petition-title"><div class="feature-content"><h2 class="section-title" id="petition-title">단체민원</h2><p class="section-description">함께 전하는 의견, 더 나은 변화.</p><div class="button-row"><a class="button button-primary" href="https://geomdan-lakepark.github.io/complaints/index.html" target="_blank" rel="noopener noreferrer" aria-label="민원 안내 보기, 새 창에서 열림">민원 안내 보기 <span aria-hidden="true">↗</span></a></div></div><div class="feature-image"><img src="assets/images/petition-night.webp" width="1254" height="1254" alt="주민의 의견을 담은 문서" loading="lazy" decoding="async"></div></section>
     </div>
+    <section class="public-about" id="about" aria-labelledby="about-title">
+      <div class="public-container about-layout">
+        <div class="about-copy"><p class="public-eyebrow">우리 단지 한눈에 보기</p><h2 class="editorial-title" id="about-title">우리의 다음 일상이<br>시작되는 곳.</h2><p class="editorial-description">단지 정보부터 공사 현황, 분양대금조회까지 한곳에서.</p>
+          <nav class="about-services thesharp-links" aria-label="우리 단지 공식 서비스">
+            <a class="thesharp-link" href="https://www.thesharp.co.kr/mythe/price_info.aspx" target="_blank" rel="noopener noreferrer" aria-label="분양대금조회, 더샵 공식 홈페이지에서 새 창으로 열림"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v5h4M10 12h5M10 16h5"/></svg></span><span class="quick-copy"><strong>분양대금조회</strong><small>로그인 → 마이더샵 → 분양대금조회</small></span><span class="quick-arrow" aria-hidden="true">↗</span></a>
+            <a class="thesharp-link" href="https://www.thesharp.co.kr/pages/prj/prj_work.aspx?hPROJECT_ID=P_360" target="_blank" rel="noopener noreferrer" aria-label="공정률·현장 사진, 더샵 공식 홈페이지에서 새 창으로 열림"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v15H3zM3 16l5-5 4 4 3-3 6 6"/><circle cx="16" cy="9" r="1.5"/></svg></span><span class="quick-copy"><strong>공정률·현장 사진</strong><small>우리 단지가 만들어지는 과정</small></span><span class="quick-arrow" aria-hidden="true">↗</span></a>
+            <a class="thesharp-link" href="https://xn--c79an5jhjs4nmongpjhypa161d.kr/" target="_blank" rel="noopener noreferrer" aria-label="단지·세대 안내, 공식 분양 사이트에서 새 창으로 열림"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8M5 10v11h14V10M10 21v-7h4v7"/></svg></span><span class="quick-copy"><strong>단지·세대 안내</strong><small>단지와 세대 정보를 공식 안내에서 확인</small></span><span class="quick-arrow" aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
+        <figure class="about-visual" id="complex-visual">
+          <img src="assets/images/complex-aerial.webp" width="3024" height="1898" alt="더샵 검단레이크파크와 검단구청, 주변 학교·공원 위치를 안내하는 조감도" loading="lazy" decoding="async">
+          <span class="aerial-label aerial-label--river">나진포천 수변공원</span>
+          <span class="aerial-label aerial-label--park">워라밸파크</span>
+          <span class="aerial-label aerial-label--district">검단구청</span>
+          <span class="aerial-label aerial-label--lake">호수공원</span>
+          <span class="aerial-label aerial-label--elementary">초등학교</span>
+          <span class="aerial-label aerial-label--middle">중학교</span>
+          <span class="aerial-label aerial-label--complex">더샵 검단레이크파크</span>
+          <button class="aerial-expand" id="aerial-open" type="button" aria-label="조감도 크게 보기">크게 보기 <span aria-hidden="true">↗</span></button>
+          <figcaption>더샵 검단레이크파크, 초등학교, 중학교, 나진포천 수변공원, 워라밸파크, 검단구청, 호수공원 위치 안내</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="council-public" id="council" aria-labelledby="council-title">
+      <div class="public-container council-layout">
+        <div class="council-intro"><p class="public-eyebrow">입예협 소개</p><h2 class="editorial-title" id="council-title">의견을 모으고,<br>함께 준비합니다.</h2><p class="editorial-description">입주예정자의 의견을 모아,<br>더 나은 입주 환경을 함께 준비하는 창구입니다.</p><div class="council-values"><span><b>소통</b>주민의 목소리</span><span><b>참여</b>함께하는 준비</span><span><b>공유</b>공개 활동 안내</span></div></div>
+        <div class="public-activity" aria-labelledby="activity-title"><div class="activity-heading"><div><p class="public-eyebrow">소식과 참여</p><h3 id="activity-title">입예협 소식과 참여 안내</h3></div></div><p class="activity-description">입예협의 준비 과정과 참여 방법을 안내합니다.</p><div class="activity-list">
+          <a class="activity-row" href="https://cafe.naver.com/tslp/3243" target="_blank" rel="noopener noreferrer" aria-label="입예협은 이렇게 준비하고 있습니다, 카페에서 새 창으로 열림"><span class="activity-type">입예협 활동</span><span class="activity-copy"><strong>입예협은 이렇게 준비하고 있습니다.</strong><small>운영 방안과 추진계획, 주요 활동 현황을 확인하세요.</small></span><span class="activity-arrow" aria-hidden="true">↗</span></a>
+          <a class="activity-row" href="https://form.naver.com/response/3xC5swspWEY" target="_blank" rel="noopener noreferrer" aria-label="위임동의서 제출 안내, 네이버 폼에서 새 창으로 열림"><span class="activity-type">위임동의</span><span class="activity-copy"><strong>위임동의서 제출 안내</strong><small>안내를 확인하고, 원하시는 경우 온라인으로 제출해 주세요.</small></span><span class="activity-arrow" aria-hidden="true">↗</span></a>
+          <a class="activity-row" href="https://geomdan-lakepark.github.io/complaints/index.html" target="_blank" rel="noopener noreferrer" aria-label="공동민원 참여 안내, 새 창에서 열림"><span class="activity-type">단체민원</span><span class="activity-copy"><strong>공동민원 참여 안내</strong><small>공동민원 안내와 참여 상태를 확인하세요.</small></span><span class="activity-arrow" aria-hidden="true">↗</span></a>
+        </div></div>
+      </div>
+    </section>
+    <section class="share-section" id="share" aria-labelledby="share-title"><div class="public-container share-layout"><div class="share-copy"><p class="public-eyebrow">공식 홈페이지 공유</p><h2 id="share-title">우리의 공간을, 함께 나눠주세요.</h2><p>단지를 알아가는 분들에게 공식 홈페이지를 전해 주세요.</p></div><div class="share-controls"><div class="button-row"><button class="button button-share" type="button" id="site-share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-4 4 4-4 4 4M6 12H4v9h16v-9h-2"/></svg>공유하기</button><button class="button button-share-secondary" type="button" id="site-copy">주소 복사 <span aria-hidden="true">↗</span></button></div><p class="share-status" role="status" id="share-status" aria-live="polite"></p></div></div></section>
   </main>
-  <footer class="site-footer"><div class="footer-inner"><p class="footer-brand"><span data-brand-title>더샵 검단레이크파크</span> <span data-brand-subtitle>입주예정자협의회 공식 홈페이지</span></p><p class="footer-copy" id="footer-copy">주민의 의견을 모아, 함께 더 나은 내일을 만듭니다.</p></div></footer>
+  <footer class="site-footer"><div class="footer-inner"><p class="footer-brand"><span data-brand-title>더샵 검단레이크파크</span><span class="footer-subtitle" data-brand-subtitle>입주예정자협의회 공식 홈페이지</span></p><p class="footer-copy" id="footer-copy">주민의 의견을 모아, 함께 더 나은 내일을 만듭니다.</p></div></footer>
+  <dialog class="guide-dialog" id="guide-dialog" aria-labelledby="guide-title"><button class="icon-close" id="guide-close" type="button" aria-label="이용 안내 닫기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button><p class="public-eyebrow">처음 오신 분을 위한 안내</p><h2 class="editorial-title" id="guide-title">함께할 준비,<br>이렇게 시작하세요.</h2><p class="guide-description">카페 가입과 계약자 인증으로 입주예정자 등업을 신청할 수 있습니다. 위임동의서 제출은 선택입니다.</p><ol class="guide-steps"><li><span class="step-number">01</span><div><h3>입예협 카페 가입</h3><p>우리 단지의 소식이 모이는 공식 카페에 가입해 주세요.</p><a class="text-link" href="https://cafe.naver.com/tslp" target="_blank" rel="noopener noreferrer" aria-label="입예협 카페로 이동, 새 창에서 열림">카페로 이동 <span aria-hidden="true">↗</span></a></div></li><li><span class="step-number">02</span><div><h3>계약자 인증 · 입주예정자 등업</h3><p>카페 안내에 따라 계약자 인증을 신청해 주세요. 확인 후 입주예정자 등급으로 등업되며, 2~3일이 소요될 수 있습니다.</p><a class="text-link" href="https://cafe.naver.com/f-e/cafes/31741674/articles/78?menuid=4&amp;referrerAllArticles=false" target="_blank" rel="noopener noreferrer" aria-label="계약자 인증·등업 안내, 카페에서 새 창으로 열림">인증 안내 보기 <span aria-hidden="true">↗</span></a></div></li><li><span class="step-number">03</span><div><h3>위임동의서 제출 · 선택</h3><p>원하시는 경우 위임동의서를 제출해 주세요. 제출 확인 후 입주자정회원 등업까지 2~3일이 소요될 수 있습니다.</p><a class="text-link" href="https://form.naver.com/response/3xC5swspWEY" target="_blank" rel="noopener noreferrer" aria-label="위임동의서 작성, 네이버 폼에서 새 창으로 열림">위임동의서 작성 <span aria-hidden="true">↗</span></a></div></li></ol><p class="guide-note">위임동의서 제출은 필수가 아닙니다. 입주예정자 등급으로도 카페를 열람할 수 있습니다. 자세한 인증·등업 기준은 카페 안내를 확인해 주세요.</p></dialog>
+  <dialog class="aerial-dialog" id="aerial-dialog" aria-labelledby="aerial-title">
+    <div class="aerial-dialog-head"><h2 id="aerial-title">더샵 검단레이크파크 · 주변 공간</h2><button class="icon-close" id="aerial-close" type="button" aria-label="조감도 닫기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button></div>
+    <div class="aerial-scroll" id="aerial-detail" tabindex="0" role="region" aria-label="주변 공간 조감도, 좌우로 스크롤하여 확인"></div>
+    <p class="aerial-dialog-note">좌우로 움직여 이름표와 주변 공간을 확인하세요.</p>
+  </dialog>
   <dialog class="notice-dialog" id="notice-dialog" aria-labelledby="notice-title" aria-describedby="notice-message"><h2 class="dialog-title" id="notice-title">링크 준비 중</h2><p class="dialog-message" id="notice-message">준비가 완료되면 안내하겠습니다.</p><form method="dialog"><button class="button button-primary dialog-close" type="submit">확인</button></form></dialog>
 </body>
 </html>
