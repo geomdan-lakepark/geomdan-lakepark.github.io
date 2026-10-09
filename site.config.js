@@ -66,8 +66,8 @@ window.COUNCIL_SITE = {
     },
     {
       id: 'petition', visible: true, navLabel: '단체민원',
-      title: '단체민원', description: '함께 전하는 의견, 더 나은 변화.',
-      url: 'complaints/index.html', buttonLabel: '민원 안내 보기',
+      title: '함께 만드는 변화', description: '우리의 목소리로, 더 나은 내일을.',
+      url: 'complaints/index.html', buttonLabel: '민원 참여하기',
       image: 'assets/images/petition-night.webp', imageAlt: '주민의 의견을 담은 문서',
       theme: 'petition',
     },
