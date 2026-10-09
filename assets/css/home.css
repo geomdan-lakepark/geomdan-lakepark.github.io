@@ -365,12 +365,13 @@ h1, h2, h3, p { margin: 0; }
 .footer-inner {
   min-height: var(--bar-height);
   padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 3px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
 }
+.footer-info { min-width: 0; display: grid; gap: 3px; }
+.footer-credit { margin: 0; color: #616f7c; font-size: 11px; line-height: 1.35; text-align: right; white-space: nowrap; }
 .footer-brand { font-size: 12px; line-height: 1.35; }
 .footer-brand span + span::before { content: ' '; white-space: pre; }
 .footer-copy { margin: 0; font-size: 11px; line-height: 1.35; }
@@ -407,7 +408,8 @@ h1, h2, h3, p { margin: 0; }
   .footer-brand { display: flex; flex-direction: column; gap: 1px; font-size: 11px; line-height: 1.3; }
   .footer-brand span + span::before { content: none; }
   .footer-copy { font-size: 10px; line-height: 1.3; }
-  .footer-inner { gap: 3px; }
+  .footer-inner { grid-template-columns: minmax(0, 1fr); gap: 3px; padding-block: 6px; }
+  .footer-credit { font-size: 10px; line-height: 1.3; }
   .feature-channels .feature-content { padding-top: 54px; }
   .channel-card-link > span { top: 16px; right: 20px; font-size: 11px; }
   .channel-actions { gap: 10px; }
