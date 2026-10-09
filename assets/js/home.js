@@ -111,7 +111,11 @@
         if (control.tagName === 'A' && externalUrl(control.getAttribute('href'))) {const arrow = document.createElement('span');arrow.textContent = ' ↗';arrow.setAttribute('aria-hidden', 'true');control.append(arrow);}
         buttons.append(control);
       }
-    } else {buttons.append(action(item, item.buttonLabel));}
+    } else {
+      const control = action(item, item.buttonLabel);
+      if (control.tagName === 'A') {const arrow = document.createElement('span');arrow.textContent = ' ↗';arrow.setAttribute('aria-hidden', 'true');control.append(arrow);}
+      buttons.append(control);
+    }
     content.append(heading, desc, buttons);
     if (channels && item.codeLink) {
       const codeLink = action(item.codeLink, item.codeLink.label);
