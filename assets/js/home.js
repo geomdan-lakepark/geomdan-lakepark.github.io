@@ -30,6 +30,9 @@
   const delegation = config.delegation || {};
   const registry = new Map(sections.map(item => [item.id, item]));
   if (delegation.visible !== false) registry.set('delegation', delegation);
+  for (const [id, label] of Object.entries(config.navLabels || {})) {
+    if (validId(id) && text(label).trim() && $(id) && !$(id).hidden && !registry.has(id)) registry.set(id, { navLabel: label });
+  }
   let noticeOpener = null;
   function showNotice(title, opener) {
     noticeOpener = opener;
@@ -86,11 +89,37 @@
   $('features').replaceChildren();
   for (const item of sections) {
     const section = document.createElement('section');section.className = `feature feature-${['cafe', 'petition'].includes(item.theme) ? item.theme : 'neutral'}`;section.id = item.id;section.setAttribute('aria-labelledby', `${item.id}-title`);
+    const channels = item.layout === 'channels';
+    if (channels) {
+      section.classList.add('feature-channels');
+      const cardLink = action(item, item.buttonLabel);
+      cardLink.className = 'channel-card-link';
+      const cardLabel = document.createElement('span');
+      cardLabel.textContent = cardLink.tagName === 'A' ? '카페로 이동' : '카페 연결 · 준비 중';
+      if (cardLink.tagName === 'A' && externalUrl(cardLink.getAttribute('href'))) {const arrow = document.createElement('span');arrow.textContent = ' ↗';arrow.setAttribute('aria-hidden', 'true');cardLabel.append(arrow);}
+      cardLink.replaceChildren(cardLabel);section.append(cardLink);
+    }
     const content = document.createElement('div');content.className = 'feature-content';
     const heading = document.createElement('h2');heading.className = 'section-title';heading.id = `${item.id}-title`;heading.textContent = text(item.title);
     const desc = document.createElement('p');desc.className = 'section-description';desc.textContent = text(item.description);
-    const buttons = document.createElement('div');buttons.className = 'button-row';buttons.append(action(item, item.buttonLabel));
-    content.append(heading, desc, buttons);section.append(content);
+    const buttons = document.createElement('div');buttons.className = 'button-row';
+    if (channels) {
+      buttons.classList.add('channel-actions');
+      for (const itemAction of Array.isArray(item.actions) ? item.actions : []) {
+        if (!itemAction) continue;
+        const control = action(itemAction, itemAction.buttonLabel, itemAction.style);
+        if (control.tagName === 'A' && externalUrl(control.getAttribute('href'))) {const arrow = document.createElement('span');arrow.textContent = ' ↗';arrow.setAttribute('aria-hidden', 'true');control.append(arrow);}
+        buttons.append(control);
+      }
+    } else {buttons.append(action(item, item.buttonLabel));}
+    content.append(heading, desc, buttons);
+    if (channels && item.codeLink) {
+      const codeLink = action(item.codeLink, item.codeLink.label);
+      codeLink.className = 'channel-code-link';
+      if (codeLink.tagName === 'A' && externalUrl(codeLink.getAttribute('href'))) {const arrow = document.createElement('span');arrow.textContent = ' ↗';arrow.setAttribute('aria-hidden', 'true');codeLink.append(arrow);}
+      content.append(codeLink);
+    }
+    section.append(content);
     const imageUrl = safeUrl(item.image);
     if (imageUrl) {const visual = document.createElement('div');visual.className = 'feature-image';const image = document.createElement('img');image.src = imageUrl;image.alt = text(item.imageAlt);image.width = 1000;image.height = 1000;image.loading = 'lazy';image.decoding = 'async';visual.append(image);section.append(visual);} else {section.classList.add('feature-text-only');}
     if (text(item.note)) {const note = document.createElement('p');note.className = 'feature-note';note.textContent = item.note;section.append(note);}
